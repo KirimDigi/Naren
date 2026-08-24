@@ -903,10 +903,23 @@
         // Initialize wishes loading
         loadWishes();
 
-        // Auto-extract guest name from URL query parameter (to) and pre-fill fields
+        // Auto-extract guest name from URL query parameter (to) or hash parameter (#to) and pre-fill fields
         (function () {
             var urlParams = new URLSearchParams(window.location.search);
             var guestName = urlParams.get('to') || urlParams.get('nama') || urlParams.get('guest') || urlParams.get('name');
+            
+            // Check hash parameters (#to=...) if not found in query string
+            if (!guestName && window.location.hash) {
+                var hashStr = window.location.hash.substring(1);
+                var hashParams = new URLSearchParams(hashStr);
+                guestName = hashParams.get('to') || hashParams.get('nama') || hashParams.get('guest') || hashParams.get('name');
+                
+                // Fallback if hash is plain string (e.g. #Nama%20Tamu)
+                if (!guestName && hashStr.indexOf('=') === -1) {
+                    guestName = decodeURIComponent(hashStr);
+                }
+            }
+
             if (guestName) {
                 // Update Cover Slide Guest Name text
                 var guestNameSlot = document.getElementById('guestNameSlot');
