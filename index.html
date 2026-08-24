@@ -86,6 +86,7 @@
         .social-icon-btn {
             transition: all 0.2s ease-in-out !important;
         }
+
         .social-icon-btn:hover {
             transform: scale(1.1);
             background-color: #0f3b5f !important;
@@ -671,23 +672,34 @@
                 <div style="opacity: 0.5"><strong>Music:</strong></div>
                 <div style="opacity: 0.5">Balinese Instrumental Music</div>
             </div>
-            <div class="wm-contact mt-3 text-center animate__animated animate__fadeInUp animate__slower animate__delay-1s" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+            <div class="wm-contact mt-3 text-center animate__animated animate__fadeInUp animate__slower animate__delay-1s"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
                 <!-- KD Logo -->
-                <img src="KirimDigi.ico" alt="KirimDigi Logo" style="width: 32px; height: 32px; border-radius: 50%; object-fit: contain; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                
+                <img src="KirimDigi.ico" alt="KirimDigi Logo"
+                    style="width: 32px; height: 32px; border-radius: 50%; object-fit: contain; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
                 <!-- Contact Us for Text -->
-                <div style="font-size: 9px; font-weight: bold; color: #0f3b5f; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;">CONTACT US FOR :</div>
-                <div style="font-size: 9.5px; color: #475569; margin-top: -2px;">Apps, Chat Bots, Digital Invitations & Websites</div>
-                
+                <div
+                    style="font-size: 9px; font-weight: bold; color: #0f3b5f; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;">
+                    CONTACT US FOR :</div>
+                <div style="font-size: 9.5px; color: #475569; margin-top: -2px;">Apps, Chat Bots, Digital Invitations &
+                    Websites</div>
+
                 <!-- Social Media Icons Row -->
                 <div class="d-flex justify-content-center align-items-center mt-1" style="gap: 10px;">
-                    <a href="https://instagram.com/kirimdigi" target="_blank" rel="noopener noreferrer" class="social-icon-btn d-flex align-items-center justify-content-center" style="width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #0f3b5f; color: #0f3b5f; text-decoration: none;">
+                    <a href="https://instagram.com/kirimdigi" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn d-flex align-items-center justify-content-center"
+                        style="width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #0f3b5f; color: #0f3b5f; text-decoration: none;">
                         <i class="ph-fill ph-instagram-logo" style="font-size: 14px;"></i>
                     </a>
-                    <a href="https://wa.me/6281380989932" target="_blank" rel="noopener noreferrer" class="social-icon-btn d-flex align-items-center justify-content-center" style="width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #0f3b5f; color: #0f3b5f; text-decoration: none;">
+                    <a href="https://wa.me/6281380989932" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn d-flex align-items-center justify-content-center"
+                        style="width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #0f3b5f; color: #0f3b5f; text-decoration: none;">
                         <i class="ph-fill ph-whatsapp-logo" style="font-size: 14px;"></i>
                     </a>
-                    <a href="https://tiktok.com/@kirimdigi" target="_blank" rel="noopener noreferrer" class="social-icon-btn d-flex align-items-center justify-content-center" style="width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #0f3b5f; color: #0f3b5f; text-decoration: none;">
+                    <a href="https://tiktok.com/@kirimdigi" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn d-flex align-items-center justify-content-center"
+                        style="width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #0f3b5f; color: #0f3b5f; text-decoration: none;">
                         <i class="ph-fill ph-tiktok-logo" style="font-size: 14px;"></i>
                     </a>
                 </div>
@@ -892,7 +904,7 @@
         loadWishes();
 
         // Auto-extract guest name from URL query parameter (to) and pre-fill fields
-        (function() {
+        (function () {
             var urlParams = new URLSearchParams(window.location.search);
             var guestName = urlParams.get('to') || urlParams.get('nama') || urlParams.get('guest') || urlParams.get('name');
             if (guestName) {
