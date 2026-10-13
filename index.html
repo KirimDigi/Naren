@@ -8,18 +8,36 @@
     <meta name="color-scheme" content="light only">
     <meta name="format-detection" content="telephone=no">
     <meta name="google" content="notranslate">
-    <title>Tasyakuran Naren</title>
-    <meta name="title" content="Tasyakuran Naren">
+    <title>Tiga Bulanan Naren</title>
+    <meta name="title" content="Tiga Bulanan Naren">
     <meta name="description"
-        content="Undangan Tasyakuran Putu Narendra Arya Ditama - Sabtu, 31 Oktober 2026 @ Pesraman Gria Gede Wayahan Buruan, Bedulu, Kec. Blahbatuh, Kabupaten Gianyar, Bali.">
-    <meta itemprop="image" content="https://kirimdigi.github.io/Naren/themes/birthday-bus/birthday-bus.jpg">
+        content="Undangan Tiga Bulanan Putu Narendra Arya Ditama - Sabtu, 31 Oktober 2026 @ Pesraman Gria Gede Wayahan Buruan, Bedulu, Kec. Blahbatuh, Kabupaten Gianyar, Bali.">
+    <meta itemprop="name" content="Tiga Bulanan Naren">
+    <meta itemprop="description"
+        content="Undangan Tiga Bulanan Putu Narendra Arya Ditama - Sabtu, 31 Oktober 2026 @ Pesraman Gria Gede Wayahan Buruan, Bedulu, Kec. Blahbatuh, Kabupaten Gianyar, Bali.">
+    <meta itemprop="image" content="https://kirimdigi.github.io/Naren/2.jpg">
     <link rel="icon" type="image/x-icon" href="KirimDigi.ico">
-    <!-- Open Graph / Facebook -->
+
+    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tasyakuran Naren">
+    <meta property="og:url" content="https://kirimdigi.github.io/Naren/">
+    <meta property="og:title" content="Tiga Bulanan Naren">
     <meta property="og:description"
-        content="Undangan Tasyakuran Putu Narendra Arya Ditama - Sabtu, 31 Oktober 2026 @ Pesraman Gria Gede Wayahan Buruan, Bedulu, Kec. Blahbatuh, Kabupaten Gianyar, Bali.">
-    <meta property="og:image" content="https://kirimdigi.github.io/Naren/themes/birthday-bus/birthday-bus.jpg">
+        content="Undangan Tiga Bulanan Putu Narendra Arya Ditama - Sabtu, 31 Oktober 2026 @ Pesraman Gria Gede Wayahan Buruan, Bedulu, Kec. Blahbatuh, Kabupaten Gianyar, Bali.">
+    <meta property="og:image" content="https://kirimdigi.github.io/Naren/2.jpg">
+    <meta property="og:image:secure_url" content="https://kirimdigi.github.io/Naren/2.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:site_name" content="Tiga Bulanan Naren">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://kirimdigi.github.io/Naren/">
+    <meta name="twitter:title" content="Tiga Bulanan Naren">
+    <meta name="twitter:description"
+        content="Undangan Tiga Bulanan Putu Narendra Arya Ditama - Sabtu, 31 Oktober 2026 @ Pesraman Gria Gede Wayahan Buruan, Bedulu, Kec. Blahbatuh, Kabupaten Gianyar, Bali.">
+    <meta name="twitter:image" content="https://kirimdigi.github.io/Naren/2.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,16 +89,59 @@
 
         #wishesListContainer {
             position: relative;
-            z-index: 50 !important;
+            z-index: 20 !important;
+            max-width: 255px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(15, 59, 95, 0.4) transparent;
+        }
+
+        #wishesListContainer::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        #wishesListContainer::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #wishesListContainer::-webkit-scrollbar-thumb {
+            background: rgba(15, 59, 95, 0.35);
+            border-radius: 4px;
+        }
+
+        #wishesListContainer::-webkit-scrollbar-thumb:hover {
+            background: rgba(15, 59, 95, 0.65);
         }
 
         #wishesListContainer .wish-item {
-            background: rgba(255, 255, 255, 0.75) !important;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.88) !important;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-left: 4px solid var(--inv-accent) !important;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Floating action buttons (QR, Music, Autoplay) styling */
+        .floating-action {
+            z-index: 1050 !important;
+        }
+
+        .floating-action .btn-float {
+            background-color: #0f3b5f !important;
+            color: #ffffff !important;
+            border: 2px solid rgba(255, 255, 255, 0.75) !important;
+            box-shadow: 0 4px 12px rgba(15, 59, 95, 0.35) !important;
+            transition: all 0.2s ease-in-out !important;
+        }
+
+        .floating-action .btn-float:hover,
+        .floating-action .btn-float:focus,
+        .floating-action .btn-float:active {
+            background-color: #1a5c8c !important;
+            color: #ffffff !important;
+            transform: scale(1.08) !important;
         }
 
         .social-icon-btn {
@@ -174,9 +235,9 @@
                                                 <div class="animate__animated animate__bounceInDown animate__slower">
                                                     <div style="width:180px;height:180px;overflow:hidden;border-radius:100%;border:4px solid var(--inv-border);"
                                                         class="animate__animated animate__shakeY animate__slower animate__infinite infinite">
-                                                        <img src="https://assets.satumomen.com/images/galleries/276265-gallery-UM8WBoE3pt.jpg"
-                                                            style="width: 100%;height: 100%;object-fit: cover;"
-                                                            alt="276265-gallery-UM8WBoE3pt.jpg">
+                                                        <img src="1.jpeg"
+                                                            style="width: 100%;height: 100%;object-fit: cover;object-position: center top;"
+                                                            alt="1.jpeg">
                                                     </div>
                                                 </div>
 
@@ -223,8 +284,11 @@
                                                         <div class="editable color-accent mb-2 animate__animated animate__fadeInDown animate__slower font-accent"
                                                             style="font-size:15px;line-height:1.4;">Atas Asung Kerta
                                                             Wara Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud
-                                                            menyelenggarakan Upacara Manusa Yadnya Tigang Sasih lan
-                                                            Mewinten putra kami</div>
+                                                            menyelenggarakan Upacara Manusa Yadnya Tigang Sasih
+                                                            putra kami:</div>
+                                                        <div class="editable font-weight-bold font-accent mb-2 animate__animated animate__fadeInDown animate__slower"
+                                                            style="font-size:20px;line-height:1.2;color:#0f3b5f;">
+                                                            Putu Narendra Arya Ditama</div>
                                                         <div class="editable mb-3 animate__animated animate__fadeInDown animate__slower font-accent"
                                                             style="font-size:15px;line-height:1.4;color:#0f3b5f;">
                                                             Merupakan suatu kebahagiaan bagi kami sekeluarga apabila
@@ -355,9 +419,9 @@
                                                     class="mb-2 animate__animated animate__bounceInDown animate__slower">
                                                     <div style="width:150px;height:150px;overflow:hidden;border-radius:100%;border:4px solid var(--inv-border);"
                                                         class="animate__animated animate__shakeY animate__slower animate__infinite infinite">
-                                                        <img src="https://assets.satumomen.com/images/galleries/276265-gallery-UM8WBoE3pt.jpg"
-                                                            style="width: 100%;height: 100%;object-fit: cover;"
-                                                            alt="276265-gallery-UM8WBoE3pt.jpg">
+                                                        <img src="1.jpeg"
+                                                            style="width: 100%;height: 100%;object-fit: cover;object-position: center top;"
+                                                            alt="1.jpeg">
                                                     </div>
                                                 </div>
                                                 <div class="text-center">
@@ -375,7 +439,7 @@
                                                         class="btn-rsvp btn btn-primary rounded-pill mb-2 animate__animated animate__fadeInUp animate__slow"
                                                         style="font-size:14px;">Kirim Ucapan RSVP</button>
                                                     <div id="wishesListContainer" class="mt-3 text-left mx-auto"
-                                                        style="max-height: 120px; max-width: 320px; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; padding: 5px;">
+                                                        style="max-height: 120px; max-width: 255px; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; padding: 4px;">
                                                         <!-- Wishes will be dynamically loaded here -->
                                                     </div>
                                                 </div>
@@ -562,12 +626,20 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content" style="height:auto; border-radius: 15px; overflow: hidden;">
                     <div
-                        style="width: 100%;aspect-ratio: 16/9; background-size:cover; background-position: center; background-image: url(images/no-image.jpg);">
+                        style="position: relative; width: 100%; height: 350px; max-height: 52vh; overflow: hidden; background-color: #f8fafc; display: flex; align-items: center; justify-content: center;">
+                        <div
+                            style="position: absolute; top: -15px; left: -15px; right: -15px; bottom: -15px; background-image: url('1.jpeg'); background-size: cover; background-position: center; filter: blur(16px); opacity: 0.35; transform: scale(1.1);">
+                        </div>
+                        <img src="1.jpeg"
+                            style="position: relative; max-height: 100%; max-width: 100%; object-fit: contain; z-index: 1;"
+                            alt="1.jpeg">
                     </div>
                     <div class="text-center py-4 px-4">
                         <div style="margin-bottom: 10px">
                             <div style="color: #b2b2b2; font-size: 14px;">Nama</div>
-                            <div id="qrGuestName" style="font-size: 18px; font-weight: bold; color: #0f3b5f; margin-top: 4px;">Nama Tamu</div>
+                            <div id="qrGuestName"
+                                style="font-size: 18px; font-weight: bold; color: #0f3b5f; margin-top: 4px;">Nama Tamu
+                            </div>
                         </div>
                     </div>
                     <button onclick="closeModal(qrModal)" type="button" class="btn btn-close"><svg
@@ -756,7 +828,7 @@
     </script>
     <!-- end script -->
     <script>
-        var SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzquX0BpgVK15cpCtnp4bf5pqmm5n8AsDYs-VxS385OTjNN3_3O74pBwfGzsKJgabF_/exec";
+        var SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbx8soA6UIqYA2mKL7fFv2y3wRyaEu1U6OPPS57n0VWy3W5fFT5mnsQPBXe2rg7uGEZ12w/exec";
 
         // Prevent swipe/scroll bubbling on the wishes container to prevent slide changing
         var wishesContainer = document.getElementById('wishesListContainer');
@@ -772,6 +844,19 @@
         // Render a single wish item card
         function renderWishCard(name, status, wish, datetime) {
             var badgeBg = status === "Hadir" ? "#22c55e" : "#ef4444";
+            
+            // Format timestamp if it's an ISO string from Google Sheets
+            var displayTime = datetime || "";
+            if (displayTime && (displayTime.indexOf('T') !== -1 || displayTime.indexOf('Z') !== -1)) {
+                try {
+                    var parsedDate = new Date(displayTime);
+                    if (!isNaN(parsedDate.getTime())) {
+                        displayTime = parsedDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' }) + ", " +
+                            parsedDate.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', hour12: false }).replace('.', ':');
+                    }
+                } catch (e) {}
+            }
+
             var card = document.createElement('div');
             card.className = "wish-item p-2 mb-2 rounded";
             card.style.cssText = "text-align: left;";
@@ -782,7 +867,7 @@
                     <span class="badge text-white px-2 py-1 rounded-pill" style="font-size: 9.5px; background-color: ${badgeBg};">${status}</span>
                 </div>
                 <p class="mb-1 text-secondary" style="font-size: 12.5px; line-height: 1.4; color: #334155 !important;">${wish}</p>
-                <div class="text-right" style="font-size: 9.5px; color: #a1a1aa;">${datetime}</div>
+                <div class="text-right" style="font-size: 9.5px; color: #a1a1aa;">${displayTime}</div>
             `;
             return card;
         }
@@ -883,13 +968,13 @@
         (function () {
             var urlParams = new URLSearchParams(window.location.search);
             var guestName = urlParams.get('to') || urlParams.get('nama') || urlParams.get('guest') || urlParams.get('name');
-            
+
             // Check hash parameters (#to=...) if not found in query string
             if (!guestName && window.location.hash) {
                 var hashStr = window.location.hash.substring(1);
                 var hashParams = new URLSearchParams(hashStr);
                 guestName = hashParams.get('to') || hashParams.get('nama') || hashParams.get('guest') || hashParams.get('name');
-                
+
                 // Fallback if hash is plain string (e.g. #Nama%20Tamu)
                 if (!guestName && hashStr.indexOf('=') === -1) {
                     guestName = decodeURIComponent(hashStr);
